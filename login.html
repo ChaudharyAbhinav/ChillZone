@@ -1,0 +1,112 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="pix.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Sen:wght@400;700;800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+  <title>Login</title>
+</head>
+
+<body>
+  <div class="navbar">
+    <div class="navbar-container">
+      <div class="logo-container">
+        <h1 class="logo">ChillZone</h1>
+      </div>
+      <div class="menu-container">
+        <ul class="menu-list">
+          <a href="index.html">
+            <li class="hi menu-list-item"><b>Home </b></li>
+          </a>
+          <li class="menu-list-item">Movies</li>
+          <li class="menu-list-item">Series</li>
+          <li class="menu-list-item">Trends</li>
+          <li class="menu-list-item">Premium</li>
+        </ul>
+      </div>
+
+      <div class="toggle">
+        <i class="fas fa-moon toggle-icon"></i>
+        <i class="fas fa-sun toggle-icon"></i>
+        <div class="toggle-ball"></div>
+      </div>
+    </div>
+  </div>
+
+  <!---->
+  <div class="wrapper">
+    <div class="title-text">
+      <div class="title login">Login Form</div>
+      <div class="title signup">Signup Form</div>
+    </div>
+    <div class="form-container">
+      <div class="slide-controls">
+        <input type="radio" name="slide" id="login" checked />
+        <input type="radio" name="slide" id="signup" />
+        <label for="login" class="slide login">Login</label>
+        <label for="signup" class="slide signup">Signup</label>
+        <div class="slider-tab"></div>
+      </div>
+      <div class="form-inner">
+        <form action="#" class="login">
+          <div class="field">
+            <input type="text" placeholder="Email Address" required />
+          </div>
+          <div class="field">
+            <input type="password" placeholder="Password" required />
+          </div>
+          <div class="pass-link">
+            <a href="#">Forgot password?</a>
+          </div>
+          <div>
+            <a href="recuringuser.html"><button class="utkarsh">Login</button></a>
+          </div>
+          <div class="signup-link">
+            Not a member? <a href="">Signup now</a>
+          </div>
+        </form>
+        <form action="#" class="signup">
+          <div class="field">
+            <input type="text" placeholder="Email Address" required />
+          </div>
+          <div class="field">
+            <input type="password" placeholder="Password" required />
+          </div>
+          <div class="field">
+            <input type="password" placeholder="Confirm password" required />
+          </div>
+          <div>
+            <a href="index.html"><button class="utkarsh">Sign Up</button></a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script>
+    const loginText = document.querySelector(".title-text .login");
+    const loginForm = document.querySelector("form.login");
+    const loginBtn = document.querySelector("label.login");
+    const signupBtn = document.querySelector("label.signup");
+    const signupLink = document.querySelector("form .signup-link a");
+    signupBtn.onclick = () => {
+      loginForm.style.marginLeft = "-50%";
+      loginText.style.marginLeft = "-50%";
+    };
+    loginBtn.onclick = () => {
+      loginForm.style.marginLeft = "0%";
+      loginText.style.marginLeft = "0%";
+    };
+    signupLink.onclick = () => {
+      signupBtn.click();
+      return false;
+    };
+  </script>
+</body>
+
+</html>
